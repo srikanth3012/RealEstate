@@ -1,0 +1,162 @@
+@import "../../responsive.scss";
+.singlePage {
+  display: flex;
+  height: 100%;
+
+  @include md {
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+
+  .details {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 100%;
+
+    @include md {
+      height: max-content;
+      flex: none;
+      margin-bottom: 50px;
+      overflow-y: hidden;
+    }
+
+    .wrapper {
+      padding-right: 50px;
+
+      .info {
+        margin-top: 50px;
+        .bottom {
+          margin-top: 50px;
+          color: #555;
+          line-height: 20px;
+        }
+      }
+    }
+
+    .textContainer {
+      p {
+        font-size: 14px;
+        font-weight: 50;
+      }
+    }
+  }
+
+  .features {
+    flex: 2;
+    background-color: #fcf5f3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include md {
+      height: max-content;
+      flex: none;
+      padding-bottom: 50px;
+      overflow-y: hidden;
+    }
+
+    .wrapper {
+      padding: 0px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .title {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      img {
+        width: 24px;
+        height: 24px;
+        background-color: papayawhip;
+      }
+
+      .feature {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .featureText {
+        p {
+          font-size: bold;
+        }
+        span {
+          font-size: 10px;
+        }
+      }
+
+      .listVertical {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 10px;
+        gap: 20px;
+        background-color: white;
+        border-radius: 10px;
+      }
+
+      .sizes {
+        display: flex;
+        justify-content: space-between;
+        .feature {
+          background-color: #fff;
+          padding: 20px 10px;
+          border-radius: 10px;
+
+          img {
+            background-color: #fff;
+          }
+
+          @include lg {
+            padding: 10px 5px;
+            font-size: 12px;
+          }
+        }
+      }
+
+      .listHorizontal {
+        display: flex;
+        padding: 20px 10px;
+        justify-content: space-around;
+        background-color: white;
+        border-radius: 10px;
+
+        @include lg {
+          padding: 10px 5px;
+          font-size: 14px;
+        }
+      }
+
+      .mapContainer {
+        width: 100%;
+        height: 200px;
+        overflow-y: hidden;
+
+        border-radius: 50px;
+      }
+    }
+
+    .buttonContainer {
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 20px 10px;
+        background-color: #fff;
+        border-radius: 4px;
+        border-color: #fece51;
+
+        img {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
